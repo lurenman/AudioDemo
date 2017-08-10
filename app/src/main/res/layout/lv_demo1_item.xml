@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_audioname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:text="音频的name"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--播放的按钮-->
+            <ImageView
+                android:id="@+id/iv_playing"
+                android:layout_height="16dp"
+                android:layout_width="11dp"
+                android:src="@drawable/suspend"
+                />
+            <!--播发的时间-->
+            <LinearLayout
+                android:id="@+id/ll_playtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                >
+                <TextView
+                    android:id="@+id/mint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="12sp"
+                    android:textColor="#b3b3b3" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="12sp"
+                    android:textColor="#b3b3b3"/>
+
+                <TextView
+                    android:id="@+id/sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="12sp"
+                    android:textColor="#b3b3b3"/>
+            </LinearLayout>
+            <!--进度条   android:secondaryProgress="60"-->
+            <ProgressBar
+                android:id="@+id/bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="3dp"
+                android:progressDrawable="@drawable/progress_bg"
+                android:background="@color/gray"
+                android:max="100"/>
+            <!--那个总共时间-->
+            <TextView
+                android:id="@+id/tv_totaltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="00:00"
+                android:textColor="#b3b3b3"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
